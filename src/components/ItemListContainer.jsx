@@ -11,7 +11,7 @@ function ItemListContainer() {
     useEffect(() => {
         const url = category
             ? `https://fakestoreapi.in/api/products/category?type=${category}`
-            : 'https://fakestoreapi.in/api/products';
+            : 'https://fakestoreapi.in/api/products'
 
         fetch(url)
             .then(res => res.json())
@@ -24,7 +24,7 @@ function ItemListContainer() {
 
     const filItemsILC = category
         ? itemsILC.filter(item => item.category === category)
-        : itemsILC;
+        : itemsILC
 
     console.log('Items ItemsILC: ', filItemsILC)
 
