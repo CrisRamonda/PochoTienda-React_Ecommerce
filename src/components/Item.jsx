@@ -1,4 +1,5 @@
 import { Card, Button, Container } from 'react-bootstrap'
+import { Link } from 'react-router'
 
 function Item({ item }) {
     return (
@@ -9,7 +10,7 @@ function Item({ item }) {
                     {item.title}
                 </Card.Text>
                 <Container className='d-flex justify-content-between align-self-end p-0'>
-                    <Button variant="dark" >Ver Detalle</Button>
+                    <Button variant="dark" as={Link} to={`/products/${item.id}`} >Ver Detalle</Button>
                     <Card.Text className='align-self-end'>
                         ${item.price}
                     </Card.Text>

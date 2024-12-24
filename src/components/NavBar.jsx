@@ -1,16 +1,18 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
+import { Nav, Navbar, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
     return (
         <Navbar bg="dark" data-bs-theme="dark">
             <Container>
-                <Navbar.Brand >PochoTienda</Navbar.Brand>
+                <Navbar.Brand as={Link} to='/'>
+                    PochoTienda
+                </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link >Moda</Nav.Link>
-                    <Nav.Link >Tecnología</Nav.Link>
+                    <Nav.Link as={Link} to='/category/mobile'>Celulares</Nav.Link>
+                    <Nav.Link as={Link} to='/category/audio'>Audio</Nav.Link>
+                    <Nav.Link as={Link} to='/category/gaming'>Gaming</Nav.Link>
+                    <Nav.Link as={Link} to='/category/tv'>Televisores</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
