@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
+import { Container } from "react-bootstrap"
 import { useParams } from "react-router"
 import ItemDetail from "./ItemDetail"
-import { Container } from "react-bootstrap"
 
 function ItemDetailContainer() {
     const [itemDetCont, setItemDetCont] = useState()
