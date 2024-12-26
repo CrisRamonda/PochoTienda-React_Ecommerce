@@ -5,9 +5,9 @@ function ItemDetail(itemDet) {
     console.log('itemDet data: ', itemDet)
 
     return (
-        <Card>
+        <Card className="d-flex justify-content-center" style={{ width: '40rem' }}>
             <Card.Img variant="top" src={itemDet?.itemDet?.image}></Card.Img>
-            <Card.Body className="d-flex flex-column">
+            <Card.Body className="">
                 <Card.Title>{itemDet?.itemDet?.title}</Card.Title>
                 <Card.Text>{itemDet?.itemDet?.description}</Card.Text>
                 <Card.Text className="text-end h4">${itemDet?.itemDet?.price}</Card.Text>

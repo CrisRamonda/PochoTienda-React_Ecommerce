@@ -26,7 +26,7 @@ function ItemListContainer() {
         ? itemsILC.filter(item => item.category === category)
         : itemsILC
 
-    console.log('Items ItemsILC: ', filItemsILC)
+    console.log('Items filtrados ItemsILC: ', filItemsILC)
 
     return (
         <Container>

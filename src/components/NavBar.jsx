@@ -1,4 +1,4 @@
-import { Nav, Navbar, Container } from 'react-bootstrap'
+import { Nav, Navbar, Container, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 function NavBar() {
@@ -6,6 +6,7 @@ function NavBar() {
         <Navbar bg="dark" data-bs-theme="dark">
             <Container>
                 <Navbar.Brand as={Link} to='/'>
+                    <Image className='mx-2' width="50" src='./src/assets/PochoLogo.svg' alt='PochoLogo' />
                     PochoTienda
                 </Navbar.Brand>
                 <Nav className="me-auto">
