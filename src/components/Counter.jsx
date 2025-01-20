@@ -14,12 +14,12 @@ function Counter() {
     }
 
     return (
-        <Container className="">
+        <Container>
             <div className="h5">Cantidad</div>
             <Button variant='danger' onClick={handleSubstract}>-1</Button>
             <Button className="" variant='success' onClick={handleAdd}>+1</Button>
             <div className="h5">{count}</div>
-            <Button className="" variant="dark">Agregar al Carrito</Button>
+            <Button variant="dark">Agregar al Carrito</Button>
         </Container>
     )
 }
