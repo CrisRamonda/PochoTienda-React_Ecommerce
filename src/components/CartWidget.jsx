@@ -1,9 +1,13 @@
 import { Button } from "react-bootstrap"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { CartContext } from "../context/CartContext"
 
 function CartWidget() {
-    const [cart, setCart] = useState([])
     const [cartElements, setCartElem] = useState(0)
+    const {addToCart,cartItems} = useContext(CartContext)
+
+    console.log(cartItems);
+    
 
     return (
         <>

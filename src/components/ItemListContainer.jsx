@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Container } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import ItemList from "./ItemList"
+import { CartContext } from '../context/CartContext'
 
 
 function ItemListContainer() {
     const [itemsILC, setItems] = useState([])
     const { category } = useParams()
+
 
     useEffect(() => {
         const url = category
@@ -17,7 +19,7 @@ function ItemListContainer() {
             .then(res => res.json())
             .then(data => {
                 setItems(data.products);
-                console.log('ItemsILC data: ', data.products)
+                //console.log('ItemsILC data: ', data.products)
             })
             .catch(err => { console.log('Error en ItemsILC: ', err) })
     }, [category])
@@ -26,7 +28,10 @@ function ItemListContainer() {
         ? itemsILC.filter(item => item.category === category)
         : itemsILC
 
-    console.log('Items filtrados ItemsILC: ', filItemsILC)
+    //console.log('Items filtrados ItemsILC: ', filItemsILC)
+
+
+
 
     return (
         <Container>

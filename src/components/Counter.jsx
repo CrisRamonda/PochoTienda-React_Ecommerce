@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { Container, Button } from "react-bootstrap"
+import { CartContext } from "../context/CartContext"
 
-function Counter() {
+function Counter({ itemCart }) {
     const [count, setCount] = useState(0)
-    // nombre del estado, y el SETER, luego el valor inicial del estado
+    const { addToCart } = useContext(CartContext)
 
     const handleAdd = () => {
         setCount(count + 1)
@@ -13,13 +14,19 @@ function Counter() {
         setCount(count - 1)
     }
 
+    const handleAddToCart = () => {
+        addToCart({ ...itemCart, quantity: count })
+        console.log('Count', count)
+        console.log('itemCart', itemCart);
+    }
+
     return (
         <Container>
             <div className="h5">Cantidad</div>
             <Button variant='danger' onClick={handleSubstract}>-1</Button>
             <Button className="" variant='success' onClick={handleAdd}>+1</Button>
             <div className="h5">{count}</div>
-            <Button variant="dark">Agregar al Carrito</Button>
+            <Button variant="dark" onClick={handleAddToCart}>Agregar al Carrito</Button>
         </Container>
     )
 }
