@@ -17,7 +17,7 @@ function Counter({ itemCart }) {
     const handleAddToCart = () => {
         addToCart({ ...itemCart, quantity: count })
         console.log('Count', count)
-        console.log('itemCart', itemCart);
+        console.log('itemCart', itemCart)
     }
 
     return (

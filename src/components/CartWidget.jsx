@@ -1,20 +1,25 @@
 import { Button } from "react-bootstrap"
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import { CartContext } from "../context/CartContext"
+import { Link } from "react-router"
+import Cart from "./Cart"
 
 function CartWidget() {
     const [cartElements, setCartElem] = useState(0)
-    const {addToCart,cartItems} = useContext(CartContext)
+    const { cartItems, getQuantity } = useContext(CartContext)
 
-    console.log(cartItems);
-    
+    console.log('CartItems: ', cartItems);
+
+    useEffect(()=>{
+        setCartElem(getQuantity)
+    },[getQuantity])
 
     return (
         <>
             <div style={{ color: 'white' }}>
                 🛒{cartElements}
             </div>
-            <Button className="mx-4" variant="light">
+            <Button as={Link} to='/cart/' className="mx-4" variant="light">
                 Ir al carro
             </Button>
         </>

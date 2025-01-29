@@ -11,8 +11,7 @@ function ItemDetailContainer() {
         fetch(`https://fakestoreapi.in/api/products/${id}`)
             .then(res => res.json())
             .then(data => {
-                setItemDetCont(data.product),
-                    console.log('ItemDetCont Data: ', data.product)
+                setItemDetCont(data.product)
             })
     }, [id])
 
