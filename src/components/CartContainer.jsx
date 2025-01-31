@@ -4,7 +4,6 @@ import { Link } from "react-router"
 import { CartContext } from "../context/CartContext"
 import Cart from "./Cart"
 
-
 function CartContainer() {
     const { cartItems, getTotal } = useContext(CartContext)
 
