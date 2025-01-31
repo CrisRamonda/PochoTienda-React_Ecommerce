@@ -1,13 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Routes, Route } from 'react-router'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import CartContainer from './components/CartContainer'
 
 function App() {
-
-
   return (
     <>
       <BrowserRouter>

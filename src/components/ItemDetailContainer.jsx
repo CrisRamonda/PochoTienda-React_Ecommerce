@@ -15,7 +15,6 @@ function ItemDetailContainer() {
             })
     }, [id])
 
-
     return (
         <Container className="p-5 d-flex justify-content-center">
             <ItemDetail itemDet={itemDetCont}></ItemDetail>

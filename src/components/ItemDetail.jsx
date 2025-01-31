@@ -2,8 +2,6 @@ import { Card } from "react-bootstrap"
 import Counter from "./Counter"
 
 function ItemDetail({ itemDet }) {
-    //console.log('itemDet data: ', itemDet)
-
     return (
         <Card className="d-flex justify-content-center" style={{ width: '40rem' }}>
             <Card.Img variant="top" src={itemDet?.image}></Card.Img>
