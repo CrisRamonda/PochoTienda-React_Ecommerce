@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import { Container } from "react-bootstrap"
 import { useParams } from "react-router"
+import { getProducts } from "../firebase/db"
 import ItemDetail from "./ItemDetail"
 
 function ItemDetailContainer() {
-    const [itemDetCont, setItemDetCont] = useState()
+    const [itemDetCont, setItemDetCont] = useState([])
     const { id } = useParams()
 
     useEffect(() => {
@@ -13,6 +14,10 @@ function ItemDetailContainer() {
             .then(data => {
                 setItemDetCont(data.product)
             })
+
+        getProducts()
+            .then(res => setItems(res.data()))
+
     }, [id])
 
     return (

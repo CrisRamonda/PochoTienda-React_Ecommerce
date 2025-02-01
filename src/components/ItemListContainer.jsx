@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
+import { getProducts, getProductsByCategory } from '../firebase/db'
 import ItemList from "./ItemList"
 
 function ItemListContainer() {
@@ -8,25 +9,18 @@ function ItemListContainer() {
     const { category } = useParams()
 
     useEffect(() => {
-        const url = category
-            ? `https://fakestoreapi.in/api/products/category?type=${category}`
-            : 'https://fakestoreapi.in/api/products'
-
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                setItems(data.products)
-            })
-            .catch(err => { console.log('Error en ItemsILC: ', err) })
+        if (category) {
+            getProductsByCategory(category)
+                .then(res => setItems(res))
+        } else {
+            getProducts()
+                .then(res => setItems(res))
+        }
     }, [category])
-
-    const filItemsILC = category
-        ? itemsILC.filter(item => item.category === category)
-        : itemsILC
 
     return (
         <Container>
-            <ItemList itemsIL={filItemsILC}></ItemList>
+            <ItemList itemsIL={itemsILC}></ItemList>
         </Container>
     )
 }
