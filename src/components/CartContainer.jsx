@@ -35,6 +35,7 @@ function CartContainer() {
                 </ListGroup>
                 <Card.Footer className="text-end h5 m-0">
                     Total: ${getTotal}
+                    <Button style={{marginLeft: 15}} variant="dark" as={Link} to='/checkout/'>Continuar Compra</Button>
                 </Card.Footer>
             </Card>
         </Container>
