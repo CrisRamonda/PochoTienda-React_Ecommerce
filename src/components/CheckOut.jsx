@@ -1,23 +1,36 @@
-import { useContext } from "react"
+import { useContext,useState } from "react"
 import { Button, Container, Form } from "react-bootstrap"
+import { useNavigate } from "react-router"
+import { serverTimestamp, doc } from "firebase/firestore"
 import { createOrder } from "../firebase/db"
 import { CartContext } from "../context/CartContext"
-import { serverTimestamp } from "firebase/firestore"
+
 
 function CheckOut() {
-    const { cartItems, getTotal } = useContext(CartContext)
-    const handleSubmit = (e) => {
+    const { cartItems, getTotal, eraseCart } = useContext(CartContext)
+    const [orderId, setOrderId] = useState(null)
+    const navigate = useNavigate()
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const formCheckOut = e.target
-        const { name, email, phone } = formCheckOut
-        const order = {
-            buyer: { name: name.value, email: email.value, phone: phone.value, },
-            items: cartItems,
-            date: serverTimestamp(),
-            total: getTotal
+        if (getTotal == 0) {
+            navigate('/cart/')
+        } else {
+            const formCheckOut = e.target
+            const { name, email, phone } = formCheckOut
+            const order = {
+                buyer: { name: name.value, email: email.value, phone: phone.value, },
+                items: cartItems,
+                date: serverTimestamp(),
+                total: getTotal
+            }
+            const orderRefId = await createOrder(order)
+            setOrderId(orderRefId)
+            navigate(`/order/${orderRefId}`)
+            eraseCart()
+            
         }
-        createOrder(order)
     }
 
     return (
