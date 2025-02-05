@@ -2,6 +2,10 @@
 
 PochoTienda es una aplicación de e-commerce desarrollada con React JS. Este proyecto es la entrega final del curso de React JS de Coderhouse.
 
+## Acceso al Deploy
+
+Puedes acceder a la aplicación desplegada en el siguiente enlace: [PochoTienda](https://proyecto-final-ramonda.vercel.app/)
+
 ## Características
 
 - Navegación entre diferentes categorías de productos.
