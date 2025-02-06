@@ -4,7 +4,7 @@ PochoTienda es una aplicación de e-commerce desarrollada con React JS. Este pro
 
 ## Acceso al Deploy
 
-Puedes acceder a la aplicación desplegada en el siguiente enlace: [PochoTienda](https://proyecto-final-ramonda.vercel.app/)
+Puedes acceder a la aplicación desplegada en el siguiente enlace: [PochoTienda](https://pochotienda.vercel.app/)
 
 ## Características
 
@@ -33,9 +33,9 @@ Puedes acceder a la aplicación desplegada en el siguiente enlace: [PochoTienda]
 
 Para iniciar la aplicación en modo de desarrollo, ejecuta:
 ```bash
-npm start
+npm run dev
 ```
-La aplicación estará disponible en `http://localhost:3000`.
+La aplicación estará disponible en `http://localhost:5173/`.
 
 ## Estructura del Proyecto
 
@@ -46,16 +46,15 @@ PochoTienda/
 │   └── ...
 ├── src/
 │   ├── components/
-│   │   ├── Cart/
-│   │   ├── Item/
-│   │   ├── ItemDetail/
-│   │   ├── ItemList/
+│   │   ├── Cart.jsx
+│   │   ├── Item.jsx
+│   │   ├── ItemDetail.jsx
+│   │   ├── ItemList.jsx
 │   │   └── ...
 │   ├── context/
 │   ├── firebase/
-│   ├── pages/
-│   ├── App.js
-│   ├── index.js
+│   ├── App.jsx
+│   ├── index.jsx
 │   └── ...
 ├── package.json
 └── README.md
@@ -70,8 +69,8 @@ PochoTienda/
 
 ## Autor
 
-Desarrollado por [Tu Nombre].
+Desarrollado por Cris Ramonda.
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia MIT.
