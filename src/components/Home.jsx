@@ -14,15 +14,15 @@ function Home() {
                 paddingTop: '10vh'
             }}>
                 <div style={{
-                    display:'flex',
-                    flexDirection:'column',
-                    alignSelf:'center'
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignSelf: 'center'
                 }}>
-                    <h4>¡Bienvenid@!</h4>
+                    <h2>¡Bienvenid@!</h2>
                     <p>Pase a ver los peores productos del condado</p>
-                    <Button variant="dark" as={Link} to='/products/'>Explorar tienda</Button>
+                    <Button size="lg" style={{ justifySelf:'stretch' }} variant="dark" as={Link} to='/products/'>Explorar tienda</Button>
                 </div>
-                <Image style={{ maxWidth: '33vw' }} src="./src/assets/ImagenHome.png"></Image>
+                <Image style={{ maxWidth: '33vw' }} src="assets/ImagenHome.png"></Image>
             </Container>
         </div>
     )

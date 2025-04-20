@@ -1,20 +1,23 @@
 import { useState, useContext, useEffect } from "react"
 import { Button } from "react-bootstrap"
 import { Link } from "react-router"
+import { ShoppingCart } from "lucide-react"
 import { CartContext } from "../context/CartContext"
 
 function CartWidget() {
     const [cartElements, setCartElem] = useState(0)
     const { cartItems, getQuantity } = useContext(CartContext)
 
-    useEffect(()=>{
+    useEffect(() => {
         setCartElem(getQuantity)
-    },[getQuantity])
+    }, [getQuantity])
 
     return (
         <>
-            <div style={{ color: 'white' }}>
-                🛒{cartElements}
+            <div style={{ 
+                color: 'white',
+                display: 'flex' }}>
+                <ShoppingCart style={{ marginRight: '5px' }} />{cartElements}
             </div>
             <Button as={Link} to='/cart/' className="mx-4" variant="light">
                 Ir al carro

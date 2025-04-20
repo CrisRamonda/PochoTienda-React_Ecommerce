@@ -7,7 +7,7 @@ function NavBar() {
         <Navbar bg="dark" data-bs-theme="dark">
             <Container>
                 <Navbar.Brand as={Link} to='/'>
-                    <Image className='mx-2' width="50" src='https://img.icons8.com/keek/100/shopping-cart-loaded.png' alt='PochoLogo' />
+                    <Image className='mx-2' width="50" src='/assets/PochoLogo.svg' alt='PochoLogo' />
                     PochoTienda
                 </Navbar.Brand>
                 <Nav className="me-auto">
