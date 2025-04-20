@@ -22,7 +22,7 @@ function Home() {
                     <p>Pase a ver los peores productos del condado</p>
                     <Button variant="dark" as={Link} to='/products/'>Explorar tienda</Button>
                 </div>
-                <Image style={{ maxWidth: '33vw' }} src="src\assets\ImagenHome.png"></Image>
+                <Image style={{ maxWidth: '33vw' }} src="./src/assets/ImagenHome.png"></Image>
             </Container>
         </div>
     )
