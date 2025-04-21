@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from "react"
 import { Container, Button } from "react-bootstrap"
 import { CartContext } from "../context/CartContext"
 import { Link } from "react-router"
+import { Plus, Minus } from 'lucide-react';
 
 function Counter({ itemCart }) {
     const [count, setCount] = useState(0)
@@ -45,8 +46,8 @@ function Counter({ itemCart }) {
     return (
         <Container>
             <div className="h5">Cantidad</div>
-            <Button variant='danger' onClick={handleSubstract}>-1</Button>
-            <Button className="" variant='success' onClick={handleAdd}>+1</Button>
+            <Button variant='danger' onClick={handleSubstract}><Minus /></Button>
+            <Button className='mx-1' variant='success' onClick={handleAdd}><Plus /></Button>
             <div className="h5">{count}</div>
             <Button variant="dark" onClick={handleAddToCart}>Agregar al Carrito</Button>
         </Container>

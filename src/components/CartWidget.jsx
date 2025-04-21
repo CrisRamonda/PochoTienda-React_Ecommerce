@@ -12,18 +12,35 @@ function CartWidget() {
         setCartElem(getQuantity)
     }, [getQuantity])
 
-    return (
-        <>
-            <div style={{ 
-                color: 'white',
-                display: 'flex' }}>
-                <ShoppingCart style={{ marginRight: '5px' }} />{cartElements}
-            </div>
-            <Button as={Link} to='/cart/' className="mx-4" variant="light">
-                Ir al carro
-            </Button>
-        </>
-    )
+    if (cartElements != 0) {
+        return (
+            <>
+                <div style={{
+                    color: 'white',
+                    display: 'flex'
+                }}>
+                    <ShoppingCart style={{ marginRight: '5px' }} />{cartElements}
+                </div>
+                <Button as={Link} to='/cart/' className="mx-4" variant="light">
+                    Ir al carro
+                </Button>
+            </>
+        )
+    } else {
+        return (
+            <>
+                <div style={{
+                    color: 'white',
+                    display: 'flex'
+                }}>
+                    <ShoppingCart style={{ marginRight: '5px' }} />{cartElements}
+                </div>
+                <Button className="mx-4" style={{ visibility: 'hidden' }}>
+                    Ir al carro
+                </Button>
+            </>
+        )
+    }
 }
 
 export default CartWidget
