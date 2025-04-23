@@ -1,6 +1,7 @@
-# PochoTienda
+# PochoTienda 🚧👷‍♂️
 
-PochoTienda es una aplicación de e-commerce desarrollada con React JS. Este proyecto es la entrega final del curso de React JS de Coderhouse.
+PochoTienda es un proyecto actualmente en construcción. 
+Se trata de un e-commerce desarrollado con React JS, utilizando React-Bootstrap para los estilos, con base de datos en Firebase. 
 
 ## Acceso al Deploy
 
