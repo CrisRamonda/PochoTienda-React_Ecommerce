@@ -3,4 +3,13 @@
     background-color: rgb(119, 119, 119);
 }
 
-
+.cart-logo {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration:none;
+    transition: 0.4s;
+}
+.cart-logo:hover {
+    transform:scale(1.25);
+}
