@@ -2,6 +2,8 @@
     font-family: Josefin Sans;
 }
 
+
+/* NAVBAR */
 .custom-drop.active,
 .custom-drop:active {
     background-color: rgb(119, 119, 119);
@@ -18,6 +20,8 @@
     transform:scale(1.25);
 }
 
+
+/* HOME */
 .home-image {
     max-width: 33vw;
     align-self: center;
