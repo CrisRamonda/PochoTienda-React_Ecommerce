@@ -4,25 +4,16 @@ import { Image, Container, Button } from "react-bootstrap"
 function Home() {
     return (
         <div style={{
-            minHeight: '100vh',
+            minHeight: '93vh',
             background: 'linear-gradient(125deg, rgb(129, 212, 250, 50%) 50%,rgb(255, 255, 255) 50%)'
         }}>
-            <Container style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-around',
-                paddingTop: '10vh'
-            }}>
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignSelf: 'center'
-                }}>
-                    <h2>¡Bienvenid@!</h2>
-                    <p>Pase a ver los peores productos del condado</p>
-                    <Button size="lg" style={{ justifySelf:'stretch' }} variant="dark" as={Link} to='/products/'>Explorar tienda</Button>
+            <Container className="d-flex flex-column-reverse flex-md-row justify-content-around" style={{paddingTop: '10vh'}}>
+                <div className="d-flex flex-column align-self-center ">
+                    <h2 className="fs-1">¡Bienvenid@!</h2>
+                    <p className="fs-5">Pase a ver los peores productos del condado</p>
+                    <Button className="fs-4" variant="dark" as={Link} to='/products/'>Explorar tienda</Button>
                 </div>
-                <Image style={{ maxWidth: '33vw' }} src="assets/ImagenHome.png"></Image>
+                <Image className="home-image" src="assets/ImagenHome.png"></Image>
             </Container>
         </div>
     )

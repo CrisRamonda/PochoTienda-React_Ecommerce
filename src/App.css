@@ -1,3 +1,7 @@
+* {
+    font-family: Josefin Sans;
+}
+
 .custom-drop.active,
 .custom-drop:active {
     background-color: rgb(119, 119, 119);
@@ -12,4 +16,22 @@
 }
 .cart-logo:hover {
     transform:scale(1.25);
+}
+
+.home-image {
+    max-width: 33vw;
+    align-self: center;
+    padding-left: 2vw;
+}
+
+@media (max-width: 768px) {
+    .home-image {
+        max-width: 60vw;
+    }
+}
+
+@media (max-width: 564px) {
+    .home-image {
+        max-width: 85vw;
+    }
 }
