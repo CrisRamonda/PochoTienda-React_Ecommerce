@@ -19,7 +19,7 @@ function ItemListContainer() {
     }, [category])
 
     return (
-        <Container>
+        <Container >
             <ItemList itemsIL={itemsILC}></ItemList>
         </Container>
     )

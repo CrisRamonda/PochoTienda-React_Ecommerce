@@ -70,8 +70,4 @@ PochoTienda/
 
 ## Autor
 
-Desarrollado por Cris Ramonda.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT.
+Desarrollado por Cris Ramonda
